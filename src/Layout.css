@@ -1,0 +1,46 @@
+.facebook,.twitter{
+    color: blue;
+}
+.github{
+    color: black;
+}
+
+.parent{
+    width: 100%;
+    height: 7rem;
+    display: grid;
+    grid-template-columns: 7rem 1fr 2fr 1fr 7rem;
+    box-shadow: 5px 10px 8px 10px #888888;
+  }
+
+  .menu_logo{
+    grid-column: 2/3;
+    display: grid;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .menu_link ul{
+    height: 7rem;
+    grid-column: 3/4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .menu_icon ul {
+    height: 7rem;
+    grid-column: 4/5;
+    display: grid;
+    grid-template-columns: 3fr repeat(3,1fr);
+    align-items: center;
+  }
+  
+  .menu_icon ul li:first-child{
+    grid-column: 2/3;
+  }
+  
+  .menu_icon ul li{
+   text-align: right;
+  }
