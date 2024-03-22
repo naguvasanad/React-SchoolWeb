@@ -1,10 +1,10 @@
-import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import { FaFacebook ,FaTwitterSquare,FaGithub} from "react-icons/fa";
 import "./Layout.css"
 import { BiSolidSchool } from "react-icons/bi";
 
 const Layout = () => {
+
   return (
     <div className='parent'>
 
@@ -23,8 +23,10 @@ const Layout = () => {
                 <li style={{listStyleType:"none"}}>
                 <Link to="/Contact" style={{textDecoration: 'none', color: 'black'}}>Contact</Link>
                 </li>
+
                 <li style={{listStyleType:"none"}}>
-                <Link to="/Service" style={{textDecoration: 'none', color: 'black'}}>Service</Link>
+  
+                    <Link to="/Service" style={{textDecoration: 'none', color: 'black'}}>Students</Link>
                 </li>
                 
             </ul>
