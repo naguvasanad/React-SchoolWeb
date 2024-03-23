@@ -9,7 +9,7 @@ const Layout = () => {
     <div className='parent'>
 
         <div className='menu_logo'>
-            <h3><BiSolidSchool className='school'/><span>S</span><span>chool</span></h3>
+            <h3><BiSolidSchool className='school' style={{color:"blue"}}/><span>S</span><span>chool</span></h3>
         </div>
         {/* menu links */}
             <div className='menu_link'>

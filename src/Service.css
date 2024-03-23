@@ -1,9 +1,12 @@
 #Add_btn{
  margin-top: 30px;
+ margin-left: 0;
+ float: left;
+ right: 0px;
+ 
 }
 
-.Service_container{
-    margin-top: 30px;
+.service_container{
     display: flex;
     justify-content: center;
     align-items: center;
