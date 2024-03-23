@@ -2,6 +2,7 @@ import React from 'react';
 import  { useEffect, useState } from 'react';
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { CiEdit } from "react-icons/ci";
+import "./Service.css"
 
 const Service = () => {
 
@@ -20,13 +21,23 @@ const Service = () => {
     window.location.href = "/AddStudent"
   }
 
+const handleDelete = (e,item)=>{
+  e.preventDefault();
+  console.log(item.Studentid);
+  fetch("http://localhost:8080/DeleteStudent?name="+ item.Studentid)
+  .then(response=>response.json())
+  .then(alert("deleted"))
+  .catch(err=>console.log())
+  
+}
+
   return (
     <>
-    <div >
-           <button className='btn btn-success'onClick={handleAddStudent} id='Add_btn'>Add Student</button>
+    <div className='service_container' id='Add_btn'>
+           <button className='btn btn-success'onClick={handleAddStudent} >Add Student</button>
 
           </div>
-    <div className='container'>
+    <div className='container1'>
       
       <table className='table table-striped '>
         <thead >
@@ -51,7 +62,7 @@ const Service = () => {
                     <td>{item.Standrad}</td>
                     <td>{item.Address}</td>
                     <td>{item.Phone_Num}</td>
-                    <td><RiDeleteBin6Line style={{color:"red"}}/></td>
+                    <td><RiDeleteBin6Line style={{color:"red"}} onClick={(e)=>handleDelete(e,item)}/></td>
                     <td><CiEdit style={{color:"blue"}}/></td>
                   </tr>
                 );

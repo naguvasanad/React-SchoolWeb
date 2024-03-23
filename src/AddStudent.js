@@ -29,7 +29,7 @@ const AddStudent = () => {
             Address:address,
             Phone:phone
         }
-        
+
        fetch("http://localhost:8080/CreateStudent",
        {
         method:"post",
@@ -51,7 +51,7 @@ const AddStudent = () => {
   return (
     <div className='container'>
         <div>
-      <h2>Add <PiStudent/></h2>
+      <h2>Add <PiStudent style={{color:"rebeccapurple"}}/></h2>
       <form>
         <div>
         <label for="Fname">FirstName:</label> <br/>
@@ -62,7 +62,7 @@ const AddStudent = () => {
         </div>
 
         <div>
-        <label for="Fname">LastName:</label> <br/>
+        <label for="Lname">LastName:</label> <br/>
         <input type='text' className='form-control'
          value={lname}
          onChange={(event)=>setLname(event.target.value)} 
@@ -70,7 +70,7 @@ const AddStudent = () => {
         </div>
 
         <div>
-        <label for="Fname">Standrad:</label> <br/>
+        <label for="Standard">Standrad:</label> <br/>
         <input type='number'  className='form-control'
          value={std}
          onChange={(event)=>setStd(event.target.value)} 
@@ -78,7 +78,7 @@ const AddStudent = () => {
         </div>
 
         <div>
-        <label for="Fname">Address:</label> <br/>
+        <label for="Address">Address:</label> <br/>
        <textarea className='form-control'
         value={address}
         onChange={(event)=>setAddress(event.target.value)} 
@@ -86,16 +86,23 @@ const AddStudent = () => {
        </div>
         
         <div>
-       <label for="Fname">Phone:</label> <br/>
+       <label for="Phone">Phone:</label> <br/>
         <input type='tel' maxLength="10"  className='form-control'
          value={phone}
          onChange={(event)=>setPhone(event.target.value)} 
         /> 
         </div>
+        
         <div>
-            <button style={{marginTop:"10px"}} className='btn btn-success'onClick={(e)=>handleSave(e)} >Save</button>
+            <label> Upload Iamge:</label> <br/>
+            <input type='file' alt=''/>
+        </div>
+
+        <div>
+            <button style={{marginTop:"10px",marginBottom:"5px"}} className='btn btn-success'onClick={(e)=>handleSave(e)} >Save</button>
             <button id='btn_back' style={{marginTop:"10px"}} className='btn btn-info' onClick={handleBack}>Back</button>
         </div>
+        
       </form>
       </div>
     </div>
